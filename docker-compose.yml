@@ -1,0 +1,13 @@
+version: '1'
+services:
+  web:
+    build: .
+    ports:
+    - "8001:8002"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+volumes:
+  visualCronVolume01: {}
