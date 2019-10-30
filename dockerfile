@@ -6,3 +6,5 @@ RUN pwsh.exe \
   -OutFile .\VisualCron.exe"
   
 ENTRYPOINT["/run.ps1"]
+
+LABEL Description="VisualCron Client" Vendor="VisualCron"
