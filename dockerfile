@@ -1,4 +1,6 @@
-FROM windows-latest
+# See also: https://hub.docker.com/_/microsoft-windows
+FROM mcr.microsoft.com/windows:1909
+
 
 MAINTAINER johnzabroski@gmail.com
 
