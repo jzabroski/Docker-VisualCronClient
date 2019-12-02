@@ -1,0 +1,1 @@
+docker build --label=jzabroski/visualcron -t visualcron .\visualcron
