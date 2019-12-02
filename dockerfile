@@ -20,7 +20,7 @@ RUN powershell -Command \
 
 RUN 7z.exe x VisualCron9.0.5.7z -oVisualCronInstaller
 
-RUN .\VisualCronInstaller\run_client_only_installer.bat
+RUN .\VisualCronInstaller\install_clientSILENT.bat
 
 RUN VisualCron.exe
 # RUN pwsh.exe \
