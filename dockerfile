@@ -13,7 +13,14 @@ RUN powershell -Command \
 RUN powershell -Command \
    choco install 7zip.portable -y 
 
+# Rename the VisualCron extension from .exe to .7z
+# Otherwise, 7z.exe can't extract the contents
+RUN powershell -Command \
+   Move-Item VisualCron9.0.5.exe VisualCron9.0.5.7z
 
+RUN 7z.exe x VisualCron9.0.5.7z -oVisualCronInstaller
+
+RUN .\VisualCronInstaller\run_client_only_installer.bat
 
 RUN VisualCron.exe
 # RUN pwsh.exe \
